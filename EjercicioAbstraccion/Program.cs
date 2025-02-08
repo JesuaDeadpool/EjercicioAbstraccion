@@ -4,10 +4,11 @@ using EjercicioAbstraccion;
 
 int opcion = 0;
 AreaTriangulo areaTriangulo = new AreaTriangulo();
+MillasKilometros millasKilometros = new MillasKilometros();
 
 Console.WriteLine("-------OPERACIONES MATEMATICAS--------");
 Console.WriteLine("        1. Area de un Triangulo       ");
-Console.WriteLine("        2. Metros a Kilometros        ");
+Console.WriteLine("        2. Millas a Kilometros        ");
 Console.WriteLine("-------ELIJA UNA OPCION DEL 1 AL 3----");
 opcion = Convert.ToInt32(Console.ReadLine());
 
@@ -26,6 +27,12 @@ switch (opcion)
         break;
 
     case 2:
+        Console.WriteLine("------Millas a Kilometros-----");
+        Console.WriteLine();
+        Console.WriteLine("Ingrese la base del triangulo : ");
+        millasKilometros.Millas = Convert.ToInt32(Console.ReadLine());
+      
+        millasKilometros.Imprimir();
         break;
 
     case 3:
@@ -33,6 +40,6 @@ switch (opcion)
         break;
 
     default:
-
+        Console.WriteLine($"La opcion que ingreso {opcion} no es valida, elija una opcion entre el 1 al 3 ");
         break; 
 }
