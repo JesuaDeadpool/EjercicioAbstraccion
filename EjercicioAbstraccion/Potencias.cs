@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace EjercicioAbstraccion
 {
-    public class MillasKilometros : FormulaMatematica
+    public class Potencias : FormulaMatematica
     {
- 
-        public double Millas { get; set; }
+
+        public int BasePotencia { get; set; }
+        public int Exponente { get; set; }
 
         public override double Calcular()
         {
-            return Millas * 1.60934; 
-
-
+            return Math.Pow(BasePotencia, Exponente); 
         }
 
         public override void Imprimir()
         {
             Console.WriteLine();
-            Console.WriteLine($"Las milla {Millas} a kilometros equivalen a : {Calcular().ToString("F2")}m");
+            Console.WriteLine($"{BasePotencia}^{Exponente} es igual a : {Calcular().ToString("F2")}");
         }
     }
 }
